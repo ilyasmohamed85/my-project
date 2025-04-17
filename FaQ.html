@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC Barber - FAQ</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Gallery ▼</button>
+                <div class="dropdown-content">
+                  <a href="history.html">History</a>
+                  <a href="Gallery.html">Buzz Cut</a>
+                
+                </div>
+              </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+<br><br><br>
+    <section class="faq-section">
+        <h2>Got Questions? We've Got Answers!</h2>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer1')">What are your opening hours? ⌄</h3>
+            <p id="answer1" class="faq-answer" style="display: none;">We are open from 9 AM - 8 PM, Monday to Saturday. Closed on Sundays.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer2')">Do I need an appointment? ⌄</h3>
+            <p id="answer2" class="faq-answer" style="display: none;">Walk-ins are welcome, but we recommend booking in advance for faster service.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer3')">What services do you offer? ⌄</h3>
+            <p id="answer3" class="faq-answer" style="display: none;">We offer haircuts, beard trims, hot towel shaves, and grooming services.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer4')">What payment methods do you accept? ⌄</h3>
+            <p id="answer4" class="faq-answer" style="display: none;">We accept cash, credit/debit cards, and mobile payments.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer5')">Do you offer discounts? ⌄</h3>
+            <p id="answer5" class="faq-answer" style="display: none;">Yes! We have student and senior citizen discounts available.</p>
+        </div>
+    </section>
+   <center>
+    <section class="contact-cta">
+        <h2>Still Have Questions?</h2>
+        <p>Feel free to reach out to us anytime.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+</center>
+<br><br><br>
+    <footer>
+        <p>&copy; 2025 MCC Barber. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

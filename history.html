@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC Barber - History of Barbering</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>The History of Barbering</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Gallery ▼</button>
+                <div class="dropdown-content">
+                  <a href="history.html">History</a>
+                  <a href="Gallery.html">Buzz Cut</a>
+                
+                </div>
+              </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <section class="gallery-section">
+        <h2 class="fade-in">Where It All Began</h2><br>
+        <p class="fade-in">Barbering is more than a cut — it’s a culture, a tradition, a craft passed down through centuries.</p><br>
+    
+        <div class="history-content">
+            <p class="fade-in"><strong>Ancient Roots:</strong> Barbering can be traced back as far as 5000 B.C. In ancient Egypt,
+                barbers used sharpened flint and seashells to groom their clients. In ancient Rome, barbershops (called <em>tonstrina</em>)
+                were central hubs for news and social connection.</p><br>
+    
+            <p class="fade-in"><strong>Middle Ages:</strong> Barbers were known as barber-surgeons. They not only cut hair and shaved beards,
+                but also performed surgeries, bloodletting, and even tooth extractions. That’s where the red and white barber pole 
+                comes from — red for blood, white for bandages.</p><br>
+    
+            <p class="fade-in"><strong>Modern Era:</strong> By the 18th and 19th centuries, barbering evolved into a specialized grooming profession.
+                In America and Europe, barbershops became cultural institutions — places to talk, relax, and stay sharp.</p><br>
+    
+            <p class="fade-in"><strong>Today:</strong> The modern barber blends tradition with style — offering fades, shaves, line-ups, 
+                and grooming with flair and precision. It’s not just about how you look — it’s how you feel when you walk out of that chair.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 MCC Barber. All rights reserved.</p>
+    </footer>
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+    
+        const appearOnScroll = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+    
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+    
+</body>
+</html>
